@@ -2,12 +2,21 @@
     border: 1px solid black;
     border-radius: 5px;
     margin: 5px;
+    width: 300px;
 }
 
 button{
     margin-bottom: 10px;
 }
 
+h4{
+    background-color: lightblue;
+    color:blue;
+    margin-left:15px;
+    margin-right:15px;
+  }
+
 img{
     width: 200px;
+    border-bottom: 1px solid gray;
 }

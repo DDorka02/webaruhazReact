@@ -14,15 +14,22 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Webáruház</h1>
+        <p>IKEA</p>
       </header>
+      <main>
       <article>
-      <Termekek lista={adatokLista} katt={katt}/>
+        <h2>Termékek</h2>
+        <Termekek lista={adatokLista} katt={katt}/>
       </article>
       <aside>
-          <h2>Kiválasztott lista</h2>
+          <p>A kosár tartalma</p>
+          <p>A kosárba {} könyv van</p>
+          <p>A kosárban levő könyyvek összege: {}</p>
           <Termekek lista={lista} katt={katt} />
       </aside>
+      
       <footer><p>Dobszay Dorka</p></footer>
+      </main>
     </div>
   );
 }

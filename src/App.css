@@ -13,8 +13,26 @@
   color: white;
 }
 
-article{
+article h4 p{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 5px;
+  grid-area: ar;
+
+}
+
+aside{
+  grid-area: as;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin:5px;
+  padding: 10px;
+  background-color: lightblue;
+}
+
+
+
+main{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:"as ar";
 }

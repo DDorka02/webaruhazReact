@@ -7,10 +7,11 @@ export default function Termek(props) {
     }
   return (
     <div className="card">
-        <h4>Neve: <br />{props.adat.nev}</h4>
+        <h4>{props.adat.nev}</h4>
         <img src={props.adat.src} alt={props.adat.alt} />
-        <p>Leírása: <br/>{props.adat.leiras}</p>
-        <button onClick={()=>katt()}>Kiválaszt</button>
+        <p>{props.adat.leiras}</p>
+        <p>Ár: {props.adat.ar} Ft</p>
+        <button onClick={()=>katt()}>Kosárba</button>
     </div>
   )
 }
