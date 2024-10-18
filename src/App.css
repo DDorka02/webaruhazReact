@@ -13,7 +13,7 @@
   color: white;
 }
 
-article h4 p{
+article{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-area: ar;

@@ -9,7 +9,7 @@ export default function Termekek(props) {
     <>
       {
         props.lista.map((elem, index) =>{
-            return (<Termek adat={elem} key={index} index={index}  katt={katt}/>)
+            return (<Termek adat={elem} key={index} index={index} katt={katt}/>)
         })
         
       }
