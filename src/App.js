@@ -2,6 +2,7 @@ import "./App.css";
 import Termekek from "./componens/Termekek";
 import { adatokLista } from "./adatok";
 import { useState } from "react";
+import Kosar from "./componens/Kosar";
 
 function App() {
   const [lista, setlista] = useState([]);
@@ -35,9 +36,17 @@ function App() {
           <p>A kosár tartalma</p>
           <p>A kosárba {db} db termék van</p>
           <p>A kosárban levő termékek összege: {ar} Ft</p>
-          <Termekek lista={lista} katt={katt} />
+          <table className="table">
+            <tr>
+              <th>Neve</th>
+              <th>Ár</th>
+              <th>Db</th>
+            </tr>
+              {lista.map((elem, index) => {
+                return (<Kosar adat={elem} key={index} />);
+                })}
+          </table>
         </aside>
-
         <footer>
           <p>Dobszay Dorka</p>
         </footer>
