@@ -9,9 +9,9 @@ function App() {
   const [db, setdb] = useState(0);
   const [ar, setar] = useState(0);
   function katt(adat) {
-    const ujLista = [...lista];
-    ujLista.push(adat);
-    setlista([...ujLista]);
+    const kosarLista = [...lista];
+    kosarLista.push(adat);
+    setlista([...kosarLista]);
     let d = db;
     d++;
     setdb(d);
@@ -36,16 +36,7 @@ function App() {
           <p>A kosár tartalma</p>
           <p>A kosárba {db} db termék van</p>
           <p>A kosárban levő termékek összege: {ar} Ft</p>
-          <table className="table">
-            <tr>
-              <th>Neve</th>
-              <th>Ár</th>
-              <th>Db</th>
-            </tr>
-              {lista.map((elem, index) => {
-                return (<Kosar adat={elem} key={index} />);
-                })}
-          </table>
+          <Kosar lista={lista} kattintas={() => {}} />
         </aside>
         <footer>
           <p>Dobszay Dorka</p>

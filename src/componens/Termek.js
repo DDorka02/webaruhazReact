@@ -2,20 +2,16 @@ import React from 'react'
 import './Termek.css'
 
 export default function Termek(props) {
-    let db=0;
-    function katt(db) {
-      db++;
-        props.katt(props.index, db)        
+    function katt() {
+        props.katt(props.index)        
     }
   return (
     <div className="card">
         <h4>{props.adat.nev}</h4>
-        <img src={props.adat.src} alt={props.adat.alt} />
+        <img src={props.adat.kep} alt="termek" />
         <p>{props.adat.leiras}</p>
         <p>Ár: {props.adat.ar} Ft</p>
-        <span>
-        <button onClick={()=>katt(db)}>Kosárba</button>
-        </span>
+        <button  type="button" className="btn btn-primary" onClick={()=>katt()}>Kosárba</button>
     </div>
   )
 }
